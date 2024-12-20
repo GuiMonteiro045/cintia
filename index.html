@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Aniversário</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background">
+        <div class="balloons">
+            <div class="balloon" style="--color: #ff6b6b;"></div>
+            <div class="balloon" style="--color: #6bc1ff;"></div>
+            <div class="balloon" style="--color: #ffcc6b;"></div>
+            <div class="balloon" style="--color: #b36bff;"></div>
+        </div>
+        <div class="container">
+            <h1>🎉 Feliz Aniversário! 🎉</h1>
+            <p>Que este dia seja tão incrível quanto você! ❤️✨</p>
+            <button onclick="showSurprise()">Clique para sua surpresa!</button>
+        </div>
+    </div>
+
+    <!-- Música de fundo -->
+    <audio id="birthdaySong" loop>
+        <source src="birthday_song.mp3" type="audio/mp3">
+        Seu navegador não suporta áudio.
+    </audio>
+
+    <script>
+        // Música de fundo
+        const audio = document.getElementById('birthdaySong');
+        window.onload = () => audio.play();
+
+        // Surpresa interativa
+        function showSurprise() {
+            alert("🎁 Você merece tudo de melhor hoje e sempre! 🎁");
+            const confetti = document.createElement('div');
+            confetti.className = 'confetti';
+            document.body.appendChild(confetti);
+            setTimeout(() => confetti.remove(), 3000);
+        }
+    </script>
+</body>
+</html>
